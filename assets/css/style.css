@@ -479,4 +479,8 @@ footer button {
     width: 46%;
     opacity: 55%;
   }
+
+  body {
+    margin-top: 80px;
+  }
 }
