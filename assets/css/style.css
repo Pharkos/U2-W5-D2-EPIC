@@ -6,6 +6,7 @@ body {
   padding: 15px;
   background-image: url("../img/sfondo.png");
   background-position: center center;
+  margin-top: 226px;
 }
 
 * {
@@ -19,7 +20,11 @@ hr {
 /* HEADER */
 header {
   background: rgb(0, 160, 198);
-  background: linear-gradient(180deg, rgba(0, 160, 198, 1) 0%, rgba(3, 109, 134, 1) 68%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 160, 198, 1) 0%,
+    rgba(3, 109, 134, 1) 68%
+  );
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -27,6 +32,11 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  position: fixed;
+  top: -9px;
+  left: 15px;
+  right: 14px;
+  z-index: 800;
 }
 
 @media screen and (min-width: 800px) {
@@ -117,6 +127,7 @@ section h2 {
 /* ELEMENTI NEL MAIN - ARTICLE */
 
 h1 {
+  position: relative;
   font-size: 2.6rem;
   line-height: 1.2;
   font-weight: bold;
@@ -183,6 +194,7 @@ h1 + p {
 }
 
 .imgLeft {
+  float: inline-start;
   margin-right: 20px;
   border: 4px solid #00a0c6;
   outline: 4px solid #a02571;
@@ -295,6 +307,24 @@ button {
   button {
     padding: 15px 30px;
   }
+
+  .twinBtn1 {
+    position: fixed;
+    right: 0px;
+    top: 14px;
+
+    z-index: 999;
+
+    color: blue;
+  }
+  .twinBtn2 {
+    position: fixed;
+    right: 0px;
+    top: 64px;
+    z-index: 999;
+
+    color: blue;
+  }
 }
 
 /* ELEMENTI NELL' ASIDE */
@@ -319,17 +349,22 @@ aside div {
     width: 33.333%;
     margin-inline: -2px;
   }
-}
-aside div p:last-child {
-  margin-bottom: 0;
-  font-size: 0.8em;
-  text-align: right;
+
+  aside div p:last-child {
+    margin-bottom: 0;
+    font-size: 0.8em;
+    text-align: right;
+  }
 }
 
 /* FOOTER */
 footer {
   background: rgb(53, 53, 53);
-  background: linear-gradient(0deg, rgba(53, 53, 53, 1) 0%, rgba(5, 85, 103, 1) 68%);
+  background: linear-gradient(
+    0deg,
+    rgba(53, 53, 53, 1) 0%,
+    rgba(5, 85, 103, 1) 68%
+  );
   box-shadow: 0 3px 3px #444;
   color: #f0f0f0;
   padding: 1em;
@@ -384,5 +419,64 @@ footer a {
   .social,
   .toTop {
     display: none;
+  }
+}
+
+/* Working On Exercise */
+
+h1 img {
+  position: absolute;
+  bottom: -11px;
+  left: 7px;
+  width: 85%;
+  opacity: 55%;
+}
+
+section h2 {
+  position: absolute;
+  left: 30px;
+  top: -20px;
+}
+
+footer button {
+  position: fixed;
+  right: 0px;
+  bottom: 14px;
+  color: violet;
+}
+
+.twinBtn1 {
+  position: fixed;
+  right: 0px;
+  bottom: 64px;
+
+  color: blue;
+}
+.twinBtn2 {
+  position: fixed;
+  right: 0px;
+  bottom: 114px;
+
+  color: blue;
+}
+
+.twinBtn1,
+.twinBtn2,
+.twinBtn3 {
+  width: 40px;
+  height: 40px;
+  border-radius: 30%;
+  border: solid white;
+  background-color: lightgray;
+  padding: 2px;
+}
+
+@media screen and (min-width: 1200px) {
+  h1 img {
+    position: absolute;
+    bottom: -25px;
+    left: 443px;
+    width: 46%;
+    opacity: 55%;
   }
 }
